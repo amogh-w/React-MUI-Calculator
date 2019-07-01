@@ -174,7 +174,7 @@ export default function Calculator(props) {
             <Button
               className={classes.keypad}
               onClick={() => {
-                props.addToResult("=");
+                props.equal();
               }}
             >
               =
