@@ -23,7 +23,16 @@ export default class App extends Component {
         result: math.evaluate(this.state.result)
       });
     } catch (e) {
-      console.log(e);
+      this.setState({
+        result: "Error!"
+      });
+      setTimeout(
+        () =>
+          this.setState({
+            result: ""
+          }),
+        1000
+      );
     }
   };
 
